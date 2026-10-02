@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Data Donatur | MR. BUAS</title>
+
+    <!-- CSS Global MR. BUAS -->
+    <link
+        rel="stylesheet"
+        href="../mrbuas-crowdfunding/assests/css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+    <nav class="navbar">
+
+        <div class="container nav-wrapper">
+
+            <!-- Brand -->
+            <a href="../index.html" class="brand-logo">
+                MR. BUAS
+            </a>
+
+            <!-- Navigation -->
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="../index.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../campaign/admin-campaign-table.html">
+                        Campaign
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-donor-table.html">
+                        Donatur
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Payment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Partner
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main class="container">
+
+        <!-- PAGE HEADER -->
+        <section>
+
+            <h1>Data Donatur</h1>
+
+            <p>
+                Kelola seluruh data donatur yang terdaftar
+                pada platform crowdfunding MR. BUAS.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             ACTION & SEARCH
+             ========================= -->
+        <section class="card">
+
+            <div>
+
+                <a
+                    href="admin-donor-create.html"
+                    class="btn-primary"
+                >
+                    + Tambah Donatur
+                </a>
+
+            </div>
+
+            <br>
+
+            <!-- Search hanya tampilan terlebih dahulu.
+                 Fungsionalitas akan dibuat saat masuk PHP. -->
+            <div class="form-group">
+
+                <label for="search">
+                    Cari Donatur
+                </label>
+
+                <input
+                    type="text"
+                    id="search"
+                    class="form-control"
+                    placeholder="Cari nama, email, atau nomor kontak..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DONOR TABLE
+             ========================= -->
+        <section>
+
+            <table class="table">
+
+                <!-- TABLE HEADER -->
+                <thead>
+
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Donatur</th>
+                        <th>Email</th>
+                        <th>Nomor Kontak</th>
+                        <th>Status Nama</th>
+                        <th>Aksi</th>
+                    </tr>
+
+                </thead>
+
+
+                <!-- TABLE BODY -->
+                <tbody>
+
+                    <!-- DONATUR 1 -->
+                    <tr>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Budi Santoso
+                        </td>
+
+                        <td>
+                            budi@gmail.com
+                        </td>
+
+                        <td>
+                            081234567890
+                        </td>
+
+                        <td>
+                            Publik
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Detail
+                            </a>
+
+                            <a
+                                href="admin-donor-edit.html"
+                                class="btn-outline"
+                            >
+                                Edit
+                            </a>
+
+                            <a
+                                href="#"
+                                class="btn-danger"
+                            >
+                                Hapus
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 2 -->
+                    <tr>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            Orang Baik
+                        </td>
+
+                        <td>
+                            anonymous@gmail.com
+                        </td>
+
+                        <td>
+                            081298765432
+                        </td>
+
+                        <td>
+                            Anonim
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Detail
+                            </a>
+
+                            <a
+                                href="admin-donor-edit.html"
+                                class="btn-outline"
+                            >
+                                Edit
+                            </a>
+
+                            <a
+                                href="#"
+                                class="btn-danger"
+                            >
+                                Hapus
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 3 -->
+                    <tr>
+
+                        <td>
+                            3
+                        </td>
+
+                        <td>
+                            Siti Rahma
+                        </td>
+
+                        <td>
+                            siti.rahma@gmail.com
+                        </td>
+
+                        <td>
+                            082112345678
+                        </td>
+
+                        <td>
+                            Publik
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Detail
+                            </a>
+
+                            <a
+                                href="admin-donor-edit.html"
+                                class="btn-outline"
+                            >
+                                Edit
+                            </a>
+
+                            <a
+                                href="#"
+                                class="btn-danger"
+                            >
+                                Hapus
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 4 -->
+                    <tr>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            Orang Baik
+                        </td>
+
+                        <td>
+                            donor@gmail.com
+                        </td>
+
+                        <td>
+                            085712345678
+                        </td>
+
+                        <td>
+                            Anonim
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Detail
+                            </a>
+
+                            <a
+                                href="admin-donor-edit.html"
+                                class="btn-outline"
+                            >
+                                Edit
+                            </a>
+
+                            <a
+                                href="#"
+                                class="btn-danger"
+                            >
+                                Hapus
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 5 -->
+                    <tr>
+
+                        <td>
+                            5
+                        </td>
+
+                        <td>
+                            Andi Pratama
+                        </td>
+
+                        <td>
+                            andi@gmail.com
+                        </td>
+
+                        <td>
+                            081377889900
+                        </td>
+
+                        <td>
+                            Publik
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Detail
+                            </a>
+
+                            <a
+                                href="admin-donor-edit.html"
+                                class="btn-outline"
+                            >
+                                Edit
+                            </a>
+
+                            <a
+                                href="#"
+                                class="btn-danger"
+                            >
+                                Hapus
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             TABLE INFO
+             ========================= -->
+        <section>
+
+            <p>
+                Menampilkan 5 data donatur.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
