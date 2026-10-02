@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tambah Donatur | MR. BUAS</title>
+
+    <!-- CSS Global MR. BUAS -->
+    <link
+        rel="stylesheet"
+        href="../assests/css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+    <nav class="navbar">
+
+        <div class="container nav-wrapper">
+
+            <!-- Brand -->
+            <a href="../index.html" class="brand-logo">
+                MR. BUAS
+            </a>
+
+            <!-- Navigation -->
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="../index.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../campaign/admin-campaign-table.html">
+                        Campaign
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admin-donor-table.html">
+                        Donatur
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Payment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Partner
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main class="container">
+
+        <!-- =========================
+             PAGE HEADER
+             ========================= -->
+        <section>
+
+            <h1>Tambah Donatur</h1>
+
+            <p>
+                Tambahkan data donatur baru ke dalam
+                sistem crowdfunding MR. BUAS.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             FORM CARD
+             ========================= -->
+        <section class="card">
+
+            <!--
+                Untuk sekarang action masih kosong
+                karena proses penyimpanan baru dibuat
+                ketika masuk PHP.
+            -->
+            <form action="#" method="post">
+
+
+                <!-- =========================
+                     NAMA DONATUR
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        placeholder="Masukkan nama lengkap donatur"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     EMAIL
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="contoh@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     NOMOR KONTAK
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Nomor Kontak
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Contoh: 081234567890"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     STATUS NAMA
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="anonymous">
+                        Pengaturan Nama Donatur
+                    </label>
+
+                    <select
+                        id="anonymous"
+                        name="anonymous"
+                        class="form-control"
+                        required
+                    >
+
+                        <option value="">
+                            -- Pilih Status --
+                        </option>
+
+                        <option value="0">
+                            Publik
+                        </option>
+
+                        <option value="1">
+                            Anonim
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- =========================
+                     INFORMATION
+                     ========================= -->
+                <div class="form-group">
+
+                    <p>
+                        <strong>Catatan:</strong>
+                        Jika donatur memilih anonim,
+                        nama donatur nantinya dapat
+                        ditampilkan sebagai
+                        <strong>"Orang Baik"</strong>
+                        pada halaman publik.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     ACTION BUTTON
+                     ========================= -->
+                <div>
+
+                    <!--
+                        Tombol belum benar-benar menyimpan
+                        ke database karena masih HTML.
+                    -->
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        Simpan Donatur
+                    </button>
+
+
+                    <a
+                        href="admin-donor-table.html"
+                        class="btn-outline"
+                    >
+                        Batal
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

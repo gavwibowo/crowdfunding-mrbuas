@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Daftar Donatur | MR. BUAS</title>
+
+    <!-- CSS Global MR. BUAS -->
+    <link
+        rel="stylesheet"
+        href="../assests/css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+         ========================= -->
+    <nav class="navbar">
+
+        <div class="container nav-wrapper">
+
+            <!-- Brand -->
+            <a href="../index.html" class="brand-logo">
+                MR. BUAS
+            </a>
+
+            <!-- Navigation -->
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="../index.html">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../campaign/public-campaign-list.html">
+                        Campaign
+                    </a>
+                </li>
+
+                <li>
+                    <a href="public-donor-list.html">
+                        Donatur
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Payment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Partner
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main class="container">
+
+        <!-- =========================
+             PAGE HEADER
+             ========================= -->
+        <section>
+
+            <h1>Daftar Donatur</h1>
+
+            <p>
+                Terima kasih kepada para donatur
+                yang telah ikut berbagi melalui MR. BUAS.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             SEARCH
+             ========================= -->
+        <section class="card">
+
+            <div class="form-group">
+
+                <label for="search">
+                    Cari Donatur
+                </label>
+
+                <!--
+                    Search belum berfungsi.
+                    Akan dibuat ketika masuk PHP.
+                -->
+                <input
+                    type="text"
+                    id="search"
+                    class="form-control"
+                    placeholder="Cari nama donatur..."
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DONOR TABLE
+             ========================= -->
+        <section>
+
+            <table class="table">
+
+                <!-- TABLE HEADER -->
+                <thead>
+
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Donatur</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+
+                </thead>
+
+
+                <!-- TABLE BODY -->
+                <tbody>
+
+
+                    <!-- DONATUR 1 -->
+                    <tr>
+
+                        <td>
+                            1
+                        </td>
+
+                        <td>
+                            Budi Santoso
+                        </td>
+
+                        <td>
+                            Publik
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Lihat Detail
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 2 -->
+                    <tr>
+
+                        <td>
+                            2
+                        </td>
+
+                        <td>
+                            Orang Baik
+                        </td>
+
+                        <td>
+                            Anonim
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Lihat Detail
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 3 -->
+                    <tr>
+
+                        <td>
+                            3
+                        </td>
+
+                        <td>
+                            Siti Rahma
+                        </td>
+
+                        <td>
+                            Publik
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Lihat Detail
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 4 -->
+                    <tr>
+
+                        <td>
+                            4
+                        </td>
+
+                        <td>
+                            Orang Baik
+                        </td>
+
+                        <td>
+                            Anonim
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Lihat Detail
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- DONATUR 5 -->
+                    <tr>
+
+                        <td>
+                            5
+                        </td>
+
+                        <td>
+                            Andi Pratama
+                        </td>
+
+                        <td>
+                            Publik
+                        </td>
+
+                        <td>
+
+                            <a
+                                href="public-donor-detail.html"
+                                class="btn-outline"
+                            >
+                                Lihat Detail
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             INFORMATION
+             ========================= -->
+        <section class="card">
+
+            <p>
+                Donatur yang memilih opsi anonim
+                akan ditampilkan sebagai
+                <strong>"Orang Baik"</strong>
+                untuk menjaga privasi identitasnya.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             TABLE INFO
+             ========================= -->
+        <section>
+
+            <p>
+                Menampilkan 5 donatur.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
