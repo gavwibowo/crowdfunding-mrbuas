@@ -1,0 +1,28 @@
+
+/* MR. BUAS GLOBAL STYLE */ 
+* { margin: 0; padding: 0; box-sizing: border-box; } 
+body { font-family: Arial, sans-serif; background-color: #f7f9fc; color: #172033; line-height: 1.6; } 
+a { text-decoration: none; color: inherit; } 
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px 0; } 
+
+/* Navbar Global */ 
+.navbar { background-color: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 16px 0; } 
+.nav-wrapper { display: flex; justify-content: space-between; align-items: center; } 
+.brand-logo { font-size: 1.4rem; font-weight: bold; color: #0a56d9; } 
+.nav-menu { display: flex; list-style: none; gap: 20px; } 
+
+/* Button System */ 
+.btn-primary { display: inline-block; padding: 10px 20px; background-color: #ffd21e; color: #172033; border-radius: 8px; font-weight: bold; border: none; cursor: pointer; } 
+.btn-outline { display: inline-block; padding: 8px 16px; border: 1px solid #0a56d9; color: #0a56d9; border-radius: 6px; } 
+.btn-danger { display: inline-block; padding: 8px 16px; background-color: #ef4444; color: white; border-radius: 6px; } 
+
+/* Table UI */ 
+.table { width: 100%; border-collapse: collapse; background-color: white; margin-top: 16px; } 
+.table th, .table td { padding: 12px 16px; border: 1px solid #e2e8f0; text-align: left; } 
+.table th { background-color: #f1f5f9; } 
+
+/* Forms & Cards */ 
+.form-group { margin-bottom: 16px; } 
+.form-control { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; margin-top: 6px; } 
+.card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+EOF
