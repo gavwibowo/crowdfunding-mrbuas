@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mulai Berdonasi | MR. BUAS</title>
+
+    <link
+        rel="stylesheet"
+        href="../assests/css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+    <nav class="navbar">
+
+        <div class="container nav-wrapper">
+
+            <a
+                href="../index.html"
+                class="brand-logo"
+            >
+                MR. BUAS
+            </a>
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="../index.html">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../campaign/public-campaign-list.html">
+                        Campaign
+                    </a>
+                </li>
+
+                <li>
+                    <a href="public-donor-list.html">
+                        Donatur
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+    <main class="container">
+
+        <!-- ======================================
+             CAMPAIGN INFORMATION
+             ====================================== -->
+        <section class="card">
+
+            <p>
+                Anda akan berdonasi untuk:
+            </p>
+
+            <h2>
+                Bantuan untuk devin bisa sombong
+                ip 14 pro max 256
+            </h2>
+
+            <p>
+                Penyaluran bantuan dana untuk membeli
+                handphone baru.
+            </p>
+
+            <p>
+                <strong>
+                    Terkumpul:
+                </strong>
+
+                Rp 7.000.000 / Rp 10.000.000
+            </p>
+
+        </section>
+
+
+        <br>
+
+
+        <!-- ======================================
+             DONOR FORM
+             ====================================== -->
+        <section class="card">
+
+            <h1>
+                Data Donatur
+            </h1>
+
+            <p>
+                Lengkapi data diri sebelum
+                melanjutkan proses donasi.
+            </p>
+
+            <br>
+
+
+            <!--
+                Form masih prototype HTML.
+                Data belum disimpan ke database.
+            -->
+            <form>
+
+
+                <!-- =========================
+                     NAMA
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Nama Lengkap
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     EMAIL
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="contoh@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     NOMOR KONTAK
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Nomor Kontak
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Contoh: 081234567890"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     PENGATURAN NAMA
+                     ========================= -->
+                <div class="form-group">
+
+                    <label for="anonymous">
+                        Pengaturan Nama Donatur
+                    </label>
+
+                    <select
+                        id="anonymous"
+                        name="anonymous"
+                        class="form-control"
+                        required
+                    >
+
+                        <option value="">
+                            -- Pilih Pengaturan Nama --
+                        </option>
+
+                        <option value="public">
+                            Tampilkan Nama Saya
+                        </option>
+
+                        <option value="anonymous">
+                            Donasi Sebagai Anonim
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- =========================
+                     PRIVACY INFORMATION
+                     ========================= -->
+                <div class="form-group">
+
+                    <p>
+                        Jika memilih
+                        <strong>Anonim</strong>,
+                        nama Anda nantinya akan
+                        ditampilkan sebagai
+                        <strong>"Orang Baik"</strong>.
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     ACTION BUTTON
+                     ========================= -->
+                <div>
+
+                    <!--
+                        Individu C belum membuat
+                        halaman Payment.
+                        Link ini akan diganti nanti.
+                    -->
+                    <a
+                        href="#"
+                        class="btn-primary"
+                    >
+                        Lanjut ke Pembayaran
+                    </a>
+
+
+                    <a
+                        href="../campaign/public-campaign-detail.html"
+                        class="btn-outline"
+                    >
+                        Kembali
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
