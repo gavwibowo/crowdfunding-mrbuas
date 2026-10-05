@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Lembaga Penyalur - Publik</title>
+    <!-- Panggil CSS global -->
+    <link rel="stylesheet" href="../assests/css/style.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .partner-search {
+            margin: 20px 0 30px;
+            max-width: 500px;
+        }
+        .partner-search input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+        .partner-card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .partner-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .partner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+        }
+        .partner-logo-wrapper {
+            width: 100%;
+            height: 150px;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #eee;
+        }
+        .partner-logo-wrapper img {
+            max-height: 90px;
+            max-width: 80%;
+            object-fit: contain;
+        }
+        .partner-card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .partner-card-body h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .partner-info {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 6px;
+        }
+        .partner-desc {
+            font-size: 0.88em;
+            color: #666;
+            margin: 10px 0 20px 0;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+        .btn-detail {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            background: #007bff;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+        }
+        .btn-detail:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Publik -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="brand">NamaProject</a>
+            <ul class="nav-links">
+                <li><a href="public-partner-list.html">Lembaga Penyalur</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="container" style="padding: 40px 20px;">
+        <h1>Daftar Lembaga Penyalur (Mitra)</h1>
+        <p style="color: #666;">Berikut adalah daftar yayasan dan lembaga penyalur yang bekerja sama dengan kami.</p>
+
+        <!-- Form Pencarian -->
+        <div class="partner-search">
+            <input type="text" placeholder="Cari nama lembaga atau lokasi...">
+        </div>
+
+        <!-- Kartu Mitra -->
+        <div class="partner-card-container">
+            
+            <!-- Card 1 -->
+            <div class="partner-card">
+                <div class="partner-logo-wrapper">
+                    <img src="../assets/images/logo-placeholder.png" alt="Yayasan Berkah Mandiri">
+                </div>
+                <div class="partner-card-body">
+                    <h3>Yayasan Berkah Mandiri</h3>
+                    <p class="partner-info"><strong>Alamat:</strong> Jl. Ahmad Yani No. 12, Bekasi</p>
+                    <p class="partner-info"><strong>PIC Lapangan:</strong> Budi Santoso</p>
+                    <p class="partner-desc">Berfokus pada penyaluran bantuan pendidikan, pemberdayaan anak yatim, dan bantuan fakir miskin.</p>
+                    <a href="public-partner-detail.html?id=1" class="btn-detail">Lihat Detail</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="partner-card">
+                <div class="partner-logo-wrapper">
+                    <img src="../assets/images/logo-placeholder.png" alt="Panti Asuhan Kasih Ibu">
+                </div>
+                <div class="partner-card-body">
+                    <h3>Panti Asuhan Kasih Ibu</h3>
+                    <p class="partner-info"><strong>Alamat:</strong> Jl. Cut Meutia No. 45, Tangerang</p>
+                    <p class="partner-info"><strong>PIC Lapangan:</strong> Siti Aminah</p>
+                    <p class="partner-desc">Mengelola pengasuhan dan kebutuhan operasional harian untuk anak-anak terlantar.</p>
+                    <a href="public-partner-detail.html?id=2" class="btn-detail">Lihat Detail</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

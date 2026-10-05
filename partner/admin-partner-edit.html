@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Lembaga Penyalur - Admin</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .current-logo {
+            display: block;
+            width: 120px;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        .form-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+        .btn-warning { background-color: #ffc107; color: #212529; font-weight: bold; }
+        .btn-secondary { background-color: #6c757d; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="brand">Admin Panel</a>
+            <ul class="nav-links">
+                <li><a href="admin-partner-table.html">Kelola Mitra</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-container">
+            <h1>Edit Data Lembaga Penyalur</h1>
+            <p style="color: #666; margin-bottom: 20px;">Perbarui informasi lembaga mitra pada form di bawah ini.</p>
+
+            <form action="admin-partner-table.html" method="POST" enctype="multipart/form-data" onsubmit="alert('Data berhasil diperbarui!');">
+                
+                <!-- Hidden Input untuk ID Mitra -->
+                <input type="hidden" name="partner_id" value="1">
+
+                <div class="form-group">
+                    <label for="nama_lembaga">Nama Lembaga / Yayasan</label>
+                    <input type="text" id="nama_lembaga" name="nama_lembaga" value="Yayasan Berkah Mandiri" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Logo / Foto Profil Saat Ini</label>
+                    <img src="../assets/images/logo-placeholder.png" alt="Logo Yayasan" class="current-logo">
+                    <label for="logo_lembaga" style="font-weight: normal; font-size: 0.9em; color: #555;">Ganti Logo (Opsional):</label>
+                    <input type="file" id="logo_lembaga" name="logo_lembaga" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat Kantor Mitra</label>
+                    <textarea id="alamat" name="alamat" rows="3" required>Jl. Ahmad Yani No. 12, RT 03/RW 04, Margahayu, Bekasi Timur, Kota Bekasi, Jawa Barat</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi / Profil Singkat</label>
+                    <textarea id="deskripsi" name="deskripsi" rows="3">Yayasan Berkah Mandiri adalah lembaga sosial yang berfokus pada penyaluran bantuan pendidikan, pemberdayaan anak yatim piatu, serta penanganan fakir miskin di wilayah Bekasi dan sekitarnya.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="nama_pic">Nama Penanggung Jawab (PIC)</label>
+                    <input type="text" id="nama_pic" name="nama_pic" value="Budi Santoso" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon_pic">Nomor Telepon / WhatsApp</label>
+                    <input type="tel" id="telepon_pic" name="telepon_pic" value="081234567890" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-warning">Perbarui Data</button>
+                    <a href="admin-partner-table.html" class="btn btn-secondary">Batal</a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

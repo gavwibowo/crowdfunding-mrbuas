@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Lembaga Penyalur - Admin</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        .form-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+        }
+        .btn-primary { background-color: #007bff; }
+        .btn-secondary { background-color: #6c757d; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="brand">Admin Panel</a>
+            <ul class="nav-links">
+                <li><a href="admin-partner-table.html">Kelola Mitra</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-container">
+            <h1>Tambah Lembaga Penyalur Baru</h1>
+            <p style="color: #666; margin-bottom: 20px;">Isi formulir di bawah ini untuk menambahkan mitra yayasan baru.</p>
+
+            <form action="admin-partner-table.html" method="POST" enctype="multipart/form-data" onsubmit="alert('Data berhasil ditambahkan!');">
+                
+                <div class="form-group">
+                    <label for="nama_lembaga">Nama Lembaga / Yayasan</label>
+                    <input type="text" id="nama_lembaga" name="nama_lembaga" placeholder="Contoh: Yayasan Peduli Sesama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="logo_lembaga">Logo / Foto Profil Lembaga</label>
+                    <input type="file" id="logo_lembaga" name="logo_lembaga" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat Kantor Mitra</label>
+                    <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap kantor mitra" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="deskripsi">Deskripsi / Profil Singkat</label>
+                    <textarea id="deskripsi" name="deskripsi" rows="3" placeholder="Tuliskan profil atau fokus kegiatan yayasan"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="nama_pic">Nama Penanggung Jawab</label>
+                    <input type="text" id="nama_pic" name="nama_pic" placeholder="Contoh: Budi Santoso" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telepon_pic">Nomor Telepon / WhatsApp</label>
+                    <input type="tel" id="telepon_pic" name="telepon_pic" placeholder="Contoh: 081234567890" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Simpan Data</button>
+                    <a href="admin-partner-table.html" class="btn btn-secondary">Batal</a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

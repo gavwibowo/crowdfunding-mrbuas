@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Lembaga Penyalur - Admin</title>
+    <!-- Panggil CSS global -->
+    <link rel="stylesheet" href="../assests/css/style.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .admin-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .header-action {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .table-tools {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+            font-size: 0.9em;
+        }
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            vertical-align: middle;
+        }
+        table th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+        }
+        .btn-action {
+            padding: 6px 12px;
+            font-size: 0.85em;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 3px;
+            color: white;
+            display: inline-block;
+        }
+        .btn-success { background-color: #28a745; }
+        .btn-warning { background-color: #ffc107; color: #212529; }
+        .btn-danger { background-color: #dc3545; }
+        .btn-primary { background-color: #007bff; }
+        
+        .pic-info {
+            font-size: 0.85em;
+            color: #666;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Admin -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="brand">Admin Panel</a>
+            <ul class="nav-links">
+                <li><a href="admin-partner-table.html">Kelola Mitra</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Konten Utama Admin -->
+    <main class="container">
+        <div class="admin-container">
+            
+            <div class="header-action">
+                <div>
+                    <h1>Manajemen Lembaga Penyalur</h1>
+                    <p style="color: #666; margin: 5px 0 0 0;">Daftar seluruh yayasan dan mitra yang terdaftar dalam sistem.</p>
+                </div>
+                <!-- Tombol menuju form tambah data -->
+                <a href="admin-partner-create.html" class="btn-action btn-primary" style="padding: 10px 16px; font-size: 0.95em;">+ Tambah Mitra Baru</a>
+            </div>
+
+            <!-- Bilah Pencarian & Filter -->
+            <div class="table-tools">
+                <input type="text" class="search-input" placeholder="Cari nama lembaga atau alamat...">
+            </div>
+
+            <!-- Tabel Data Mitra -->
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">No</th>
+                            <th>Nama Lembaga</th>
+                            <th>Alamat Kantor</th>
+                            <th>PIC Lapangan</th>
+                            <th style="width: 200px;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Yayasan Berkah Mandiri</strong></td>
+                            <td>Jl. Ahmad Yani No. 12, Bekasi Timur</td>
+                            <td>
+                                Budi Santoso
+                                <span class="pic-info">0812-3456-7890</span>
+                            </td>
+                            <td>
+                                <a href="public-partner-detail.html" class="btn-action btn-success">Detail</a>
+                                <a href="admin-partner-edit.html" class="btn-action btn-warning">Edit</a>
+                                <a href="#" onclick="if(confirm('Apakah Anda yakin ingin menghapus data ini?')) { alert('Data berhasil dihapus (Dummy)'); } return false;" class="btn-action btn-danger">Hapus</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Panti Asuhan Kasih Ibu</strong></td>
+                            <td>Jl. Cut Meutia No. 45, Tangerang</td>
+                            <td>
+                                Siti Aminah
+                                <span class="pic-info">0857-9876-5432</span>
+                            </td>
+                            <td>
+                                <a href="public-partner-detail.html" class="btn-action btn-success">Detail</a>
+                                <a href="admin-partner-edit.html" class="btn-action btn-warning">Edit</a>
+                                <a href="#" onclick="if(confirm('Apakah Anda yakin ingin menghapus data ini?')) { alert('Data berhasil dihapus (Dummy)'); } return false;" class="btn-action btn-danger">Hapus</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
