@@ -1,6 +1,6 @@
 <?php
 // 1. Hubungkan koneksi database
-include "koneksi.php";
+include "../koneksi.php";
 
 // 2. Ambil ID dari URL
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;

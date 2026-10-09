@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "../koneksi.php";
 
 $kategori = isset($_GET['category']) ? mysqli_real_escape_string($koneksi, trim($_GET['category'])) : '';
 $keyword = isset($_GET['q']) ? mysqli_real_escape_string($koneksi, trim($_GET['q'])) : '';
