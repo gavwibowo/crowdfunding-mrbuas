@@ -1,6 +1,6 @@
 <?php
 // 1. Hubungkan ke database
-include 'koneksi.php';
+include '../koneksi.php';
 
 // 2. Ambil seluruh data dari tabel campaigns (diurutkan dari yang terbaru)
 $query  = "SELECT * FROM campaigns ORDER BY id DESC";
