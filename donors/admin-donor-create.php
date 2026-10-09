@@ -9,7 +9,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Mulai Berdonasi | MR. BUAS</title>
+    <title>Tambah Donatur | MR. BUAS</title>
 
     <link
         rel="stylesheet"
@@ -19,9 +19,9 @@
 
 <body>
 
-    <!-- ==========================================
-         NAVBAR
-         ========================================== -->
+    <!-- =========================
+         NAVBAR ADMIN
+         ========================= -->
     <nav class="navbar">
 
         <div class="container nav-wrapper">
@@ -37,19 +37,31 @@
 
                 <li>
                     <a href="../index.html">
-                        Beranda
+                        Dashboard
                     </a>
                 </li>
 
                 <li>
-                    <a href="../campaign/public-campaign-list.html">
+                    <a href="../campaign/admin-campaign-table.php">
                         Campaign
                     </a>
                 </li>
 
                 <li>
-                    <a href="public-donor-list.html">
+                    <a href="admin-donor-table.php">
                         Donatur
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Payment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Partner
                     </a>
                 </li>
 
@@ -60,71 +72,36 @@
     </nav>
 
 
-    <!-- ==========================================
+    <!-- =========================
          MAIN CONTENT
-         ========================================== -->
+         ========================= -->
     <main class="container">
 
-        <!-- ======================================
-             CAMPAIGN INFORMATION
-             ====================================== -->
-        <section class="card">
+        <section>
+
+            <h1>
+                Tambah Donatur
+            </h1>
 
             <p>
-                Anda akan berdonasi untuk:
-            </p>
-
-            <h2>
-                Bantuan untuk devin bisa sombong
-                ip 14 pro max 256
-            </h2>
-
-            <p>
-                Penyaluran bantuan dana untuk membeli
-                handphone baru.
-            </p>
-
-            <p>
-                <strong>
-                    Terkumpul:
-                </strong>
-
-                Rp 7.000.000 / Rp 10.000.000
+                Tambahkan data donatur baru ke dalam
+                sistem crowdfunding MR. BUAS.
             </p>
 
         </section>
 
 
-        <br>
-
-
-        <!-- ======================================
-             DONOR FORM
-             ====================================== -->
+        <!-- =========================
+             FORM TAMBAH DONATUR
+             ========================= -->
         <section class="card">
 
-            <h1>
-                Data Donatur
-            </h1>
+            <form
+                action="admin-donor-store.php"
+                method="POST"
+            >
 
-            <p>
-                Lengkapi data diri sebelum
-                melanjutkan proses donasi.
-            </p>
-
-            <br>
-
-
-            <!--
-                Form masih prototype HTML.
-                Data belum disimpan ke database.
-            -->
-            <form>
-
-
-                <!-- =========================
-                     NAMA
-                     ========================= -->
+                <!-- Nama -->
                 <div class="form-group">
 
                     <label for="name">
@@ -136,16 +113,14 @@
                         id="name"
                         name="name"
                         class="form-control"
-                        placeholder="Masukkan nama lengkap"
+                        placeholder="Masukkan nama lengkap donatur"
                         required
                     >
 
                 </div>
 
 
-                <!-- =========================
-                     EMAIL
-                     ========================= -->
+                <!-- Email -->
                 <div class="form-group">
 
                     <label for="email">
@@ -164,9 +139,7 @@
                 </div>
 
 
-                <!-- =========================
-                     NOMOR KONTAK
-                     ========================= -->
+                <!-- Nomor Kontak -->
                 <div class="form-group">
 
                     <label for="phone">
@@ -185,9 +158,7 @@
                 </div>
 
 
-                <!-- =========================
-                     PENGATURAN NAMA
-                     ========================= -->
+                <!-- Status Nama -->
                 <div class="form-group">
 
                     <label for="anonymous">
@@ -201,16 +172,20 @@
                         required
                     >
 
-                        <option value="">
-                            -- Pilih Pengaturan Nama --
+                        <option
+                            value=""
+                            disabled
+                            selected
+                        >
+                            -- Pilih Status --
                         </option>
 
-                        <option value="public">
-                            Tampilkan Nama Saya
+                        <option value="0">
+                            Publik
                         </option>
 
-                        <option value="anonymous">
-                            Donasi Sebagai Anonim
+                        <option value="1">
+                            Anonim
                         </option>
 
                     </select>
@@ -218,45 +193,36 @@
                 </div>
 
 
-                <!-- =========================
-                     PRIVACY INFORMATION
-                     ========================= -->
+                <!-- Informasi Anonimitas -->
                 <div class="form-group">
 
                     <p>
-                        Jika memilih
-                        <strong>Anonim</strong>,
-                        nama Anda nantinya akan
-                        ditampilkan sebagai
+                        <strong>Catatan:</strong>
+                        Jika donatur memilih anonim,
+                        nama asli tetap tersimpan di database
+                        untuk kebutuhan admin, tetapi pada
+                        halaman publik akan ditampilkan sebagai
                         <strong>"Orang Baik"</strong>.
                     </p>
 
                 </div>
 
 
-                <!-- =========================
-                     ACTION BUTTON
-                     ========================= -->
+                <!-- Tombol -->
                 <div>
 
-                    <!--
-                        Individu C belum membuat
-                        halaman Payment.
-                        Link ini akan diganti nanti.
-                    -->
-                    <a
-                        href="../payment/public-payment-list.html"
+                    <button
+                        type="submit"
                         class="btn-primary"
                     >
-                        Lanjut ke Pembayaran
-                    </a>
-
+                        Simpan Donatur
+                    </button>
 
                     <a
-                        href="../campaign/public-campaign-detail.html"
+                        href="admin-donor-table.php"
                         class="btn-outline"
                     >
-                        Kembali
+                        Batal
                     </a>
 
                 </div>

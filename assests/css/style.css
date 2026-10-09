@@ -660,3 +660,447 @@ a {
     }
 
 }
+/* ==========================================================================
+   MR. BUAS - MASTER CSS MODUL PAYMENT (STRICT PREFIX: pmt-)
+   Digunakan untuk Halaman Admin & Checkout Flow Publik
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. NAVBAR & NAVIGATION (PUBLIK)
+   -------------------------------------------------------------------------- */
+.pmt-navbar {
+  background-color: #1e40af;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 14px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pmt-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pmt-nav-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pmt-nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.pmt-nav-link:hover,
+.pmt-nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. STEPPER WIZARD (3-STEP INDICATOR PUBLIK)
+   -------------------------------------------------------------------------- */
+.pmt-stepper-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px 0 36px 0;
+}
+
+.pmt-step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.pmt-step-item.active {
+  color: #2563eb;
+}
+
+.pmt-step-item.completed {
+  color: #16a34a;
+}
+
+.pmt-step-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pmt-step-item.active .pmt-step-badge {
+  background-color: #2563eb;
+}
+
+.pmt-step-item.completed .pmt-step-badge {
+  background-color: #16a34a;
+}
+
+.pmt-step-line {
+  width: 60px;
+  height: 2px;
+  background-color: #e2e8f0;
+}
+
+.pmt-step-line.active {
+  background-color: #2563eb;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. LAYOUT GRID & CARDS
+   -------------------------------------------------------------------------- */
+/* Grid 2 Kolom Layout Publik (65% Content / 35% Sidebar) */
+.pmt-checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .pmt-checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Standar Admin & Detail */
+.pmt-card,
+.pmt-block-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Sticky Sidebar Ringkasan Donasi */
+.pmt-sidebar-sticky {
+  position: sticky;
+  top: 90px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* --------------------------------------------------------------------------
+   4. TAB SWITCHER & RADIO CARD (PILIH METODE)
+   -------------------------------------------------------------------------- */
+/* Tab Filter Kategori (Semua / Bank / E-Wallet) */
+.pmt-tab-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+.pmt-tab-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pmt-tab-btn:hover {
+  background-color: #f8fafc;
+}
+
+.pmt-tab-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+/* Radio Option Card Metode Pembayaran */
+.pmt-radio-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.pmt-radio-card:hover {
+  border-color: #93c5fd;
+}
+
+.pmt-radio-card.selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.pmt-radio-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.pmt-radio-card.selected .pmt-radio-dot {
+  border-color: #2563eb;
+  background-color: #2563eb;
+}
+
+.pmt-radio-card.selected .pmt-radio-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. CALLOUT BOX & DATA ROWS
+   -------------------------------------------------------------------------- */
+.pmt-callout-box {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pmt-data-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #f1f5f9;
+  font-size: 14px;
+}
+
+.pmt-data-row:last-child {
+  border-bottom: none;
+}
+
+.pmt-data-label {
+  color: #64748b;
+}
+
+.pmt-data-value {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.pmt-summary-total-box {
+  border-top: 2px solid #f1f5f9;
+  padding-top: 16px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. DATA TABLE ADMIN & BADGES
+   -------------------------------------------------------------------------- */
+.pmt-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.pmt-table th {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pmt-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.pmt-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.pmt-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status Badges */
+.pmt-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.pmt-badge-aktif {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.pmt-badge-nonaktif {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.pmt-badge-bank {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.pmt-badge-ewallet {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. FORM CONTROLS & BUTTONS
+   -------------------------------------------------------------------------- */
+.pmt-form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.pmt-form-control:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Buttons */
+.pmt-btn-yellow {
+  background-color: #facc15;
+  color: #0f172a;
+  font-weight: 800;
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.pmt-btn-yellow:hover {
+  background-color: #eab308;
+}
+
+.pmt-btn-blue {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.pmt-btn-blue:hover {
+  background-color: #1e40af;
+}
+
+.pmt-btn-outline,
+.pmt-btn-back {
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.pmt-btn-outline:hover,
+.pmt-btn-back:hover {
+  background-color: #f1f5f9;
+}
+
+.pmt-btn-danger {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.pmt-btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+.pmt-btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
