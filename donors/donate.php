@@ -255,7 +255,6 @@ if ($progress > 100) {
                     value="<?= $campaign['id']; ?>"
                 >
 
-
                 <!-- Nama -->
                 <div class="form-group">
 
