@@ -69,9 +69,11 @@ $image = !empty($data["image"]) ? $data["image"] : "devin-hp.jpeg";
                         <div class="cmp-progress-fill" style="width: <?php echo $persen; ?>%;"></div>
                     </div>
 
-                    <a href="../donors/public-donor-form.html?campaign_id=<?php echo $data['id']; ?>" class="btn btn-primary" style="display: block; text-align: center; width: 100%; margin-top: 20px; font-size: 1.1rem; padding: 14px;">
-                        Donasi Sekarang
-                    </a>
+                    <a href="../donors/donate.php?campaign_id=<?php echo $data['id']; ?>"
+   class="btn btn-primary"
+   style="display: block; text-align: center; width: 100%; margin-top: 20px; font-size: 1.1rem; padding: 14px;">
+    Donasi Sekarang
+</a>
                 </div>
             </div>
         </div>
