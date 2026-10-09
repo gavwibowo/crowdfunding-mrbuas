@@ -35,7 +35,7 @@ while ($cat_row = mysqli_fetch_assoc($query_cat)) $categories[] = $cat_row['cate
         <ul class="cmp-nav-menu">
             <li><a href="../index.html" class="cmp-nav-link">Beranda</a></li>
             <li><a href="public-campaign-list.php" class="cmp-nav-link active">Campaign</a></li>
-            <li><a href="../donors/public-donor-list.html" class="cmp-nav-link">Donatur</a></li>
+            <li><a href="../donors/public-donor-list.php" class="cmp-nav-link">Donatur</a></li>
             <li><a href="../partner/public-partner-list.html" class="cmp-nav-link">Mitra Penyalur</a></li>
             <li><a href="../about/public-about-list.html" class="cmp-nav-link">Tentang Kami</a></li>
         </ul>
