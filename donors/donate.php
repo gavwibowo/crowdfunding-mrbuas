@@ -244,7 +244,7 @@ if ($progress > 100) {
         <section class="card">
 
             <form
-                action="donate-process.php"
+                action="../payment/public-payment-list.php"
                 method="POST"
             >
 
